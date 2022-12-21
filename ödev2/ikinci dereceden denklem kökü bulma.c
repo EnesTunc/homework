@@ -22,7 +22,7 @@ int main()
 	
 	if (diskriminant<0)
 	{
-		printf("***Denkleminizin reel root'u yoktur***");
+		printf("\n\n***Denkleminizin reel root'u yoktur***");
 		
 		return 0;
 	}
