@@ -1,0 +1,71 @@
+/*CRAPSGAME~~~~ZAR OYUNU*/
+
+
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+
+ int main()
+{
+	int zar1,zar2,i,puan_old;
+	int toplam1=0,toplam2=0,puan=0;
+	
+	srand(time(NULL));
+	
+	for(i=0;i<2;i++)
+	{
+		 zar1= rand()%6+1; 
+         toplam1+=zar1; 
+     } 
+     
+    switch (toplam1){ 
+     case 7: 
+     case 11: 
+     printf("***Kazandın***"); 
+        
+         break; 
+     
+     case 2: 
+     case 3: 
+     case 12: 
+      printf("***Kaybettin***"); 
+        
+         break; 
+     case 4: 
+     case 5: 
+     case 6: 
+     case 8: 
+     case 9: 
+     case 10: 
+        
+         puan+=toplam1; 
+        
+         break;
+    }
+       
+        while(1) 
+     { 
+         puan=0; 
+         for(i=0;i<2;i++) 
+         { 
+             zar2=rand()%6+1;
+             puan+=zar2; 
+         }
+         if(puan==puan_old) 
+         { 
+             printf("\n***Kazandın***"); 
+             printf("\n\nNOT!! kazandin veya kaybettinden 2 tane cikarsa ilk cikan degerlendirilir");
+             return 0;
+         } 
+         if(puan==7) 
+         { 
+             printf("\n***Kaybettin***");
+             printf("\n\nNOT!! kazandin veya kaybettinden 2 tane cikarsa ilk cikan degerlendirilir");
+             return 0;
+         } 
+     } 
+ 
+ 
+  }
+  
