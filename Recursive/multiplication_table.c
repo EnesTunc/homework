@@ -3,34 +3,34 @@
 #include <stdio.h>
 
 
-int table(int i, int j) 
+int table(int x, int y) 
 {
-    if (i==1&&j==1) 
+    if (x==1&&y==1) 
 	{
         printf("\n");
     }
     
-    if (j==1) 
+    if (y==1) 
 	{
-        printf("%d  ",i);
+        printf("%d  ",x);
     }
     
-    printf("%d  ",i*j);
+    printf("%d  ",x*y);
     
-    if (j<10) 
+    if (y<10) 
 	{
-        table(i,j+1);
+        table(x,y+1);
     } 
-	else if (i<10) 
+	else if (x<10) 
 	{
         printf("\n");
-        table(i+1,1);
+        table(x+1,y);
     }
 }
 
 int main() 
 {
-    table(1,1);
+    table(0,0);
     
     return 0;
 }
